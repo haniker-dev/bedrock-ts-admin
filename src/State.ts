@@ -20,5 +20,7 @@ export function updateLogin(login: LoginState, action: LoginAction): LoginState 
       return { ...login, email: action.value };
     case 'ChangePassword':
       return { ...login, password: action.value };
+    case 'Submit':
+      return { ...login };
   }
 }

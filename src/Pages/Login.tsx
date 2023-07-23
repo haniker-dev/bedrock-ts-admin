@@ -14,6 +14,7 @@ const View: React.FC<Props> = ({ state, dispatch }) => {
 
   const validEmail = isValidEmail(email || '');
   const validPassword = isPassword(password || '');
+  const disabled = !validEmail || !validPassword;
 
   return (
     <div style={styles.container}>
@@ -41,8 +42,10 @@ const View: React.FC<Props> = ({ state, dispatch }) => {
         <div style={styles.buttonContainer}>
           <input
             type="button"
+            disabled={disabled}
             style={styles.button}
             value="Submit"
+            onClick={() => dispatchLogin({ kind: 'Submit' })}
           />
         </div>
       </div>

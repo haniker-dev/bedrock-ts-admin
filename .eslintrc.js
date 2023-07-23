@@ -11,9 +11,7 @@ module.exports = {
       version: '18.2.0',
     },
     'import/extensions': ['.ts', '.tsx'],
-    'import/resolver': {
-      typescript: {},
-    },
+    'import/resolver': { typescript: {} },
   },
   extends: [
     'plugin:import/recommended',
